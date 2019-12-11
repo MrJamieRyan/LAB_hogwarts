@@ -11,12 +11,27 @@ get '/students/?' do
 erb(:index)
 end
 
+
+
 # new
 
 get '/students/new' do
   erb(:new)
 end
 
+# edit
+
+get '/students/:id/edit' do
+  @student = Student.find(params[:id])
+  erb(:edit)
+end
+
+# update
+
+post '/students/:id/update' do
+  Student.new(params).update
+  erb(:update)
+end
 
 # show
 
@@ -33,8 +48,9 @@ post '/students/?' do
   erb(:create)
 end
 
-# edit
 
-# update
+
+
+
 
 # destroy
