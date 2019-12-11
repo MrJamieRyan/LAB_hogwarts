@@ -25,8 +25,13 @@ get '/students/:id' do
 erb(:show)
 end
 
-
 # create
+
+post '/students/?' do
+  @student = Student.new(params)
+  @student.save
+  erb(:create)
+end
 
 # edit
 
