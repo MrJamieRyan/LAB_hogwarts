@@ -17,11 +17,16 @@ end
 # new
 
 get '/students/new' do
+  @houses = House.all
   erb(:new)
 end
 
 # show
 
+get '/students/:id/?' do
+@student = Student.find(params[:id])
+erb(:show)
+end
 
 
 # edit
@@ -36,12 +41,6 @@ end
 post '/students/:id/update' do
   Student.new(params).update
   erb(:update)
-end
-
-
-get '/students/:id/?' do
-@student = Student.find(params[:id])
-erb(:show)
 end
 
 # create
