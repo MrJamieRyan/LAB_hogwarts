@@ -12,10 +12,9 @@
 <label for="house-select">Select House:</label>
 <select name="house_id" id="house-select" value="<%=@student.house.name%>">
   <option value="<%=@student.house.id%>"><%=@student.house.name.capitalize%></option>
-  <option value="1">Gryffindor</option>
-  <option value="2">Hufflepuff</option>
-  <option value="3">Ravenclaw</option>
-  <option value="4">Slytherin</option>
+  <% @houses.each do |house| %>
+  <option value="<%= house.id %>"><%= house.name.capitalize %></option>
+  <% end %>
 </select>
 
 <input type="submit" value="Update Student"> -->

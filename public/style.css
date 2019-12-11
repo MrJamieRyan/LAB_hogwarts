@@ -69,3 +69,20 @@ div div {
   border-bottom: solid 1px white;
   margin-left: 400px;
 }
+
+.gryffindor {
+  color: red;
+}
+
+
+.slytherin {
+  color: green;
+}
+
+.hufflepuff {
+  color: purple;
+}
+
+.ravenclaw {
+  color: blue;
+}

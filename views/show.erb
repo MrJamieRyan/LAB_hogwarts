@@ -3,7 +3,9 @@
 <p>First Name: <%=@student.first_name.capitalize%></p>
 <p>Last Name: <%=@student.last_name.capitalize%></p>
 <p>Age: <%=@student.age%></p>
-<p>House: <%=@student.house.name.capitalize%></p>
+<!-- <p id="house">House: <%=@student.house.name.capitalize%></p> -->
+
+<p class="<%= @student.house.name.downcase %>">House: <%=@student.house.name.capitalize%></p>
 
 <form action="/students/<%=@student.id%>/edit" method="get">
   <input type="submit" value="EDIT Student">
