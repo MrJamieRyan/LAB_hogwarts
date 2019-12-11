@@ -1,5 +1,6 @@
 require('sinatra')
 require('sinatra/contrib/all')
+require ('pry')
 require_relative('models/student')
 require_relative('models/house')
 also_reload('./models/*')
@@ -19,6 +20,10 @@ get '/students/new' do
   erb(:new)
 end
 
+# show
+
+
+
 # edit
 
 get '/students/:id/edit' do
@@ -33,9 +38,8 @@ post '/students/:id/update' do
   erb(:update)
 end
 
-# show
 
-get '/students/:id' do
+get '/students/:id/?' do
 @student = Student.find(params[:id])
 erb(:show)
 end
@@ -48,9 +52,10 @@ post '/students/?' do
   erb(:create)
 end
 
-
-
-
-
-
 # destroy
+
+post '/students/:id/delete' do
+  @student = Student.find(params[:id])
+  @student.delete
+  erb(:delete)
+end

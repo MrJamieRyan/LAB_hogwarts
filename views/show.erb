@@ -4,3 +4,11 @@
 <p>Last Name: <%=@student.last_name.capitalize%></p>
 <p>Age: <%=@student.age%></p>
 <p>House: <%=@student.house.name.capitalize%></p>
+
+<form action="/students/<%=@student.id%>/edit" method="get">
+  <input type="submit" value="EDIT Student">
+</form>
+
+<form action="/students/<%=@student.id%>/delete" method="post">
+  <input type="submit" value="DELETE Student">
+</form>
