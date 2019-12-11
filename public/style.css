@@ -3,6 +3,7 @@ body {
   font-family: 'Rye', cursive;
   color: #ccad00;
   background-image: url("/harry_potter.gif");
+  text-align: right;
 }
 
 a {
@@ -34,7 +35,7 @@ a:hover {
 }
 .student {
   border: 5px double;
-  margin: 0 35px 30px 0;  
+  margin: 0 35px 30px 0;
   padding: 25px;
   width: 200px;
   display: inline-block;
@@ -54,4 +55,17 @@ a:hover {
   vertical-align: middle;
   width: 160px;
   margin: 0 1em 0 0;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+/* max-width: 200px;
+align: right; */
+}
+
+div div {
+  border-bottom: solid 1px white;
+  margin-left: 400px;
 }
